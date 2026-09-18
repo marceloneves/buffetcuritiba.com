@@ -1,0 +1,45 @@
+# Changelog
+
+## [Não lançado] — Migração para site 100% estático (HTML/CSS/JS)
+
+Este projeto foi extraído originalmente de um site WordPress via SiteSucker
+(mirror estático). Esta atualização remove todo o restante de dependência do
+WordPress e adiciona os arquivos essenciais para hospedagem como site
+estático puro.
+
+### Removido
+- `_downloads.html` — artefato de log gerado pelo SiteSucker durante a
+  extração; não era uma página real do site.
+- `<link rel="pingback" href="…/xmlrpc.php">` em todas as 43 páginas HTML —
+  apontava para um endpoint do WordPress que não existe mais.
+- Comentários de devtools `/*# sourceURL=/wp-includes/… */`,
+  `global-styles-inline-css` e `wp-img-auto-sizes-contain-inline-css`
+  (129 ocorrências) — referências cosméticas ao build interno do WordPress.
+- Entradas `"/wp-*.php"` e `"/wp-admin/*"` das regras de Speculation Rules
+  (prefetch) embutidas no `<head>` de todas as páginas — apontavam para
+  rotas administrativas do WordPress que não existem no site estático.
+
+### Alterado
+- Pasta `wp-content/` renomeada para `assets/` (mantendo a subestrutura
+  `assets/themes/leadv/…` e `assets/uploads/…`).
+- Todas as referências de caminho correspondentes (CSS, JS, fontes,
+  imagens, ícones, Open Graph, JSON-LD) atualizadas de `wp-content` para
+  `assets` — 3.799 substituições em 43 arquivos HTML.
+
+### Adicionado
+- `.htaccess` — força HTTPS e domínio sem `www`, remove `.html` da URL,
+  redireciona rotas antigas do WordPress (`wp-admin`, `wp-login.php`,
+  `wp-json`, `xmlrpc.php`, `/feed/`) para a home, compressão gzip/deflate,
+  cache de navegador, cabeçalhos de segurança, bloqueio de listagem de
+  diretórios e de arquivos sensíveis (`.bak`, `.log`, `.sql`, `.zip`, `.env`).
+- `robots.txt` — permite indexação total e referencia o `sitemap.xml`.
+- `sitemap.xml` — lista as 43 páginas reais do site com data de última
+  modificação e prioridade.
+- `404.html` — página de erro simples e independente do tema, sem
+  dependência de assets do WordPress.
+
+### Mantido (não dependia do WordPress)
+- `cdn-cgi/` — script de ofuscação de e-mail da Cloudflare (não é do
+  WordPress).
+- Todas as 43 páginas de conteúdo e os botões de contato via WhatsApp/tel,
+  que já não dependiam de formulário/backend.
