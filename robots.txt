@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://buffetcuritiba.com/sitemap.xml
+Sitemap: https://buffetcuritiba.com/sitemap-index.xml
