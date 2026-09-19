@@ -11,6 +11,7 @@ A empresa oferece dois modelos de contratação: **Buffet com local para festa**
 - [Serviços](https://buffetcuritiba.com/servicos/): Visão geral dos serviços de buffet para festa infantil, casamento, 15 anos, formatura, eventos corporativos e muito mais.
 - [Contato](https://buffetcuritiba.com/contato/): Canal para solicitar orçamento de buffet com local para festa ou serviço gastronômico a domicílio em Curitiba e região.
 - [Blog](https://buffetcuritiba.com/blog/): Dicas para organizar festas infantis, casamentos, aniversários e eventos, com ideias de cardápio e decoração.
+- [Onde fazer minha festa em Curitiba?](https://buffetcuritiba.com/blog/onde-fazer-minha-festa-em-curitiba/): Guia para escolher o local da festa em Curitiba por ocasião (casamento, festa infantil, 15 anos, formatura, eventos corporativos), com buffet no espaço próprio ou a domicílio.
 - [Política de Privacidade](https://buffetcuritiba.com/politica-de-privacidade/): Informações sobre coleta e uso de dados dos visitantes do site.
 
 ## Tipos de evento (buffet para ocasião)
